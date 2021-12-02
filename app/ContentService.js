@@ -18,13 +18,26 @@ exports.createContent = async (req) => {
   return{'err':null,'data':result.data,'msg':result.msg}
 
 }
+exports.createContentPermission = async (req) => {
+  var body = req.body; 
+  console.log(body);
+  result = await request.createContentPermission(body)
+  if (result.err) return{'err':result.err,'data':null,'msg':result.msg}
+  return{'err':null,'data':result.data,'msg':result.msg}
 
+}
 exports.readContentPermission = async (req) => {
   var body = req.body; 
   result = await request.readContentPermission(body)
   if (result.err) return{'err':result.err,'data':null,'msg':result.msg}
   return{'err':null,'data':result.data,'msg':result.msg}
 
+}
+exports.deleteContentPermission = async (req) => {
+  var body = req,body;
+  result = await request.deleteContentPermission(body)
+  if(result.err) return{'err':result.err,'data':null,'msg':result.msg}
+  return{'err':null,'data':result.data,'msg':result.msg}
 }
  
 exports.readAllContent = async (req) => {

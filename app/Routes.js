@@ -15,12 +15,17 @@ module.exports = (app, console) => {
         utils.handleresultdict(res,result)
        }
     )
-
-    app.post('/readContentPermission',async (req, res) => {
-        result  = await ContentService.readContentPermission(req);
+    app.post('/createContentPermission',async (req, res) => {
+        result  = await ContentService.createContentPermission(req);
         utils.handleresultdict(res,result)
        }
     )
+    app.post('/deleteContentPermission',async (req, res) => {
+        result  = await ContentService.deleteContentPermission(req);
+        utils.handleresultdict(res,result)
+       }
+    )
+
     app.post('/readContentPermission',async (req, res) => {
         result  = await ContentService.readContentPermission(req);
         utils.handleresultdict(res,result)
