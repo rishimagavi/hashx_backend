@@ -1,17 +1,16 @@
 ﻿
 # Hashx Service for Content
 
-Service to implement Wallet Operations.
+Service to implement Content Operations.
 Run using - npm install npm start (OR) node index.js
 
 # Routes
 
 ## /readContent	
 
-Gets the Content.
+Reads a Content : Request Body -
 
-Request Body -
--req.body.ContentUUID: ContentUUID of the Content
+req.body.ContentUUID
 
 Response Body -
 {ContentUUID,ProviderName, ProviderURL, FileType,FileSize, FileName, OwnerUUID, UploadedOn}
